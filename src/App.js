@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import InputKeywords from './components/InputKeywords';
+import OutputSongs from './components/OutputSongs';
 
 function App() {
+  const [keywords, setKeywords] = useState([]);
+  const [songs, setSongs] = useState([]);
+
+  const handleKeywordsSubmit = (inputKeywords) => {
+    setKeywords(inputKeywords);
+    fetch(`/suggestions?keywords=${inputKeywords}`)
+      .then(res => res.json())
+      .then(data => setSongs(data));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <InputKeywords onSubmit={handleKeywordsSubmit} />
+      {songs.length > 0 &&
+        <OutputSongs songs={songs} keywords={keywords} />
+      }
     </div>
   );
 }

@@ -1,117 +1,156 @@
-/* App.css */
-
-/* Main background color */
-body {
-  background-color: #f9e9e9;
-}
-
-/* Header */
-header {
-  background-color: #ffc107;
-  padding: 20px;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px #6c757d;
-  margin: 0;
-}
-
-/* Navigation links */
-nav {
+/* App container styles */
+.container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: all 0.2s ease-in-out;
-}
-
-nav a:hover {
-  background-color: #6c757d;
-}
-
-/* Form */
-form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+/* Error message styles */
+.error-message {
+  color: red;
   margin-top: 20px;
 }
 
-form h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  border: none;
-  margin-bottom: 20px;
-}
-
-button[type="submit"] {
-  background-color: #6c757d;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-button[type="submit"]:hover {
-  background-color: #ffc107;
-  color: #fff;
-}
-
+/* Modal styles */
 .modal {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  z-index: 1;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
+.modal-header {
+  font-size: 24px;
   font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
+.modal-song {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Form styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.form label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.form button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: #fff;
   cursor: pointer;
 }
+
+.form button[type="submit"]:hover {
+  background-color: #0d8add;
+}
+
+.form button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: default;
+  color: #fff;
+}
+
+.form button[type="submit"]:disabled:hover {
+  background-color: #ccc;
+}
+
+/* Song list styles */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.list-item span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.list-item button {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-item button:hover {
+  text-decoration: underline;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.header p {
+  font-size: 18px;
+  margin: 0;
+  margin-left: 20px;
+}
+
+/* @media only screen and (max-width: 768px) {
+  .container {
+    */

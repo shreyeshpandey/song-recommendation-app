@@ -1,0 +1,48 @@
+.song-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .form-control {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-control label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control input {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+  }
+  
+  .btn {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .loading {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
